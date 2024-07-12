@@ -1,4 +1,4 @@
-<app-toolbar></app-toolbar>
+<app-toolbar [charactersCount]="characters?.info?.count" (pageChanged)="onPageChange($event)"></app-toolbar>
 <div class="container">
     @for (character of characters?.results; track $index) {
         <app-card
@@ -7,10 +7,4 @@
             [image]="character.image"
         ></app-card>
     }
-    <mat-paginator
-        [length]="characters?.info?.count"
-        hidePageSize="true"
-        pageSize="20"
-        (page)="onPageChange($event)"
-    ></mat-paginator>
 </div>

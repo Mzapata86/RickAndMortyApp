@@ -1,4 +1,10 @@
 <mat-toolbar>
-    <span>Rick and Morty App</span>
+  <span>Rick and Morty App</span>
+  <mat-paginator
+    [length]="charactersCount"
+    hidePageSize="true"
+    pageSize="20"
+    showFirstLastButtons="true"
+    (page)="pageChanged.emit($event)"
+  ></mat-paginator>
 </mat-toolbar>
-  
