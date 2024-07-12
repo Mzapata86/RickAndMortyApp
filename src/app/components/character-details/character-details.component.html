@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>{{ characterData.name }}</h2>
+<mat-dialog-content>
+    <img [src]="characterData.image">
+    <div>
+        <p><b>Status: </b>{{ characterData.status || 'N/A' }}</p>
+        <p><b>Specie: </b>{{ characterData.species || 'N/A' }}</p>
+        <p><b>type: </b>{{ characterData.type || 'N/A' }}</p>
+        <p><b>Gender: </b>{{ characterData.gender || 'N/A' }}</p>
+        <p><b>Location: </b>{{ characterData.location.name || 'N/A' }}</p>
+        <p><b>Origin: </b>{{ characterData.origin.name || 'N/A' }}</p>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>Ok</button>
+</mat-dialog-actions>
